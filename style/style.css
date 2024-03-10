@@ -11,6 +11,7 @@ body {
 
 #body {
     margin-top: 8rem;
+    min-height: 50vh;
 }
 
 /*Document texts*/
@@ -129,30 +130,42 @@ h3 {
     border-top: 1px ridge rgb(206, 141, 19);
     box-shadow: 1px 1px 12px black;
     margin-top: 10vh;
-    padding: 5vh 20px 4vh 20px;
+    padding: 5vh 2rem 0 2rem;
     overflow: auto;
 }
 #bottom_banner section:not(#bottom_banner section section) {
     display: flex;
     justify-content: center;
+    margin-bottom: 5rem;
 }
-#bottom_banner section section {
-    width: 100%;
-    min-width: 300px;
+#bottom_banner section section:not(#bottom_banner section section section) {
+    width: max-content;
+    max-width: 700px;
+    margin: auto;
+    display: block;
+    padding: 0 20px 0 20px;
+}
+#bottom_banner section section section {
+    display: inline-block;
+}
+
+/* Bottom banner images */
+
+#bottom_banner .logo {
+    height: 2.3rem;
+    box-sizing: border-box;
 }
 
 /* Bottom banner texts */
 
 #bottom_banner h6 {
     color: white;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     font-weight: lighter;
-    margin: 0;
+    margin: 0 0 7px 0;
+    text-align: left;
 }
 #bottom_banner a {
     color: white;
     font-style: italic;
-}
-#bottom_banner .one_line {
-    margin-top: 0.5rem;
 }
