@@ -169,3 +169,38 @@ h3 {
     color: white;
     font-style: italic;
 }
+
+/* Mobile friendly */
+
+@media only screen and (max-width: 550px) {
+    #logo_sect:first-child {
+        display: none;
+    }
+}
+@media only screen and (max-width: 440px) {
+    .txt {
+        min-width: 160px;
+        font-size: 0.7rem;
+    }
+}
+@media only screen and (max-width: 599px) {
+    #bottom_banner .logo {
+        height: 1rem;
+    }
+    #bottom_banner h6 {
+        font-size: 0.4rem;
+        min-width: fit-content;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+    h2 {
+        font-size: 1.1rem;
+    }
+    h3 {
+        font-size: 0.8rem;
+    }
+    .img h6 {
+        font-size: 0.6rem;
+    }
+}
