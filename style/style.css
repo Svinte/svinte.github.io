@@ -41,7 +41,7 @@ h3 {
     display: inline-table;
 }
 #body a {
-    color: rgb(197, 138, 27);
+    font-weight: bolder;
 }
 
 /* Document images */
@@ -62,7 +62,6 @@ h3 {
     padding: 20px;
     margin: 0;
     font-style: italic;
-    border-bottom: 2px dashed grey;
     font-size: 0.75rem;
 }
 
@@ -72,9 +71,7 @@ h3 {
     height: auto;
     padding: 1.85rem;
     font-size: 1rem;
-    border-bottom: 2px ridge rgb(206, 141, 19);
     text-align: left;
-    background-color: rgb(27, 24, 24);
     box-shadow: 1px 2px 12px currentColor;
 }
 #top_banner section {
@@ -89,7 +86,6 @@ h3 {
 #top_banner p {
     font-size: 1rem;
     font-family: courier;
-    color: white;
     margin-left: 4rem;
 }
 #top_banner a {
@@ -99,16 +95,12 @@ h3 {
 
 /* Top banner logo section */
 
-#logo_sect {
-    border-right: 1px solid white;
-}
 #top_banner img {
     width: 2.7rem;
     border-radius: 12px;
     display: inline;
     position: absolute;
     margin-top: -0.85rem;
-    border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 /* Navigation section */
@@ -126,9 +118,6 @@ h3 {
 /* Bottom banner */
 
 #bottom_banner {
-    background-color: rgb(27, 24, 24);
-    border-top: 1px ridge rgb(206, 141, 19);
-    box-shadow: 1px 1px 12px black;
     margin-top: 10vh;
     padding: 5vh 2rem 0 2rem;
     overflow: auto;
@@ -159,14 +148,12 @@ h3 {
 /* Bottom banner texts */
 
 #bottom_banner p {
-    color: white;
     font-size: 0.9rem;
     font-weight: lighter;
     margin: 0 0 7px 0;
     text-align: left;
 }
 #bottom_banner a {
-    color: white;
     font-style: italic;
 }
 
@@ -202,5 +189,11 @@ h3 {
     }
     .img p {
         font-size: 0.6rem;
+    }
+}
+@media only screen and (min-width: 2250px) {
+    #bottom_banner section section:not(#bottom_banner section section section) {
+        text-align: center;
+        margin: 0 2rem 0 2rem;
     }
 }

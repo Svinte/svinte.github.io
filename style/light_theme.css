@@ -1,12 +1,52 @@
+/* Document body */
+
 body {
     background-color: white;
 }
 #body {
     color: black;
 }
+#body a {
+    color: rgb(197, 138, 27);
+}
+
+/* Top banner */
+
+#top_banner {
+    border-bottom: 2px ridge rgb(206, 141, 19);
+    background-color: rgb(27, 24, 24);
+    color: white;
+}
 #top_banner a {
     color: white;
 }
+#top_banner img {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+
+}
+
+/* Document images */
+
 .img p {
     color: rgb(100, 100, 100);
+    border-bottom: 2px dashed grey;
+}
+
+/* Bottom banner */
+
+#bottom_banner {
+    background-color: rgb(27, 24, 24);
+    border-top: 1px ridge rgb(206, 141, 19);
+    box-shadow: 1px 1px 12px black;
+}
+#logo_sect {
+    border-right: 1px solid white;
+}
+#bottom_banner p {
+    color: white;
+
+}
+#bottom_banner a {
+    color: white;
+
 }
