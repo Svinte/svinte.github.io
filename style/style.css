@@ -57,7 +57,7 @@ h3 {
     border-radius: 17px;
     box-shadow: 1px 1px 7px currentColor;
 }
-.img h6 {
+.img p {
     text-align: right;
     padding: 20px;
     margin: 0;
@@ -86,7 +86,7 @@ h3 {
     font-weight: lighter;
     display: inline;
 }
-#top_banner h6 {
+#top_banner p {
     font-size: 1rem;
     font-family: courier;
     color: white;
@@ -158,7 +158,7 @@ h3 {
 
 /* Bottom banner texts */
 
-#bottom_banner h6 {
+#bottom_banner p {
     color: white;
     font-size: 0.9rem;
     font-weight: lighter;
@@ -187,7 +187,7 @@ h3 {
     #bottom_banner .logo {
         height: 1rem;
     }
-    #bottom_banner h6 {
+    #bottom_banner p {
         font-size: 0.4rem;
         min-width: fit-content;
     }
@@ -200,7 +200,7 @@ h3 {
     h3 {
         font-size: 0.8rem;
     }
-    .img h6 {
+    .img p {
         font-size: 0.6rem;
     }
 }
