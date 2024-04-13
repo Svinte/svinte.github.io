@@ -54,6 +54,7 @@ h3 {
 }
 .img img {
     max-width: 100%;
+    height: auto;
     border-radius: 17px;
     box-shadow: 1px 1px 7px currentColor;
 }
@@ -107,12 +108,19 @@ h3 {
 
 #navigation_sect {
     margin-left: 10px;
+    padding: 0;
 }
 
 /* Top banner language section*/
 
 #lang_sect {
-    float: right;
+    position: absolute;
+    right: 1rem;
+    top: 0.925rem
+}
+#lang_sect p, #lang_sect li {
+    width: max-content;
+    margin: 0;
 }
 
 /* Bottom banner */
