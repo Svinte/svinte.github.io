@@ -97,7 +97,7 @@ h3 {
 
 /* Top banner logo section */
 
-#top_banner img {
+#top_banner img:not(.icon) {
     width: 2.7rem;
     border-radius: 12px;
     display: inline;
@@ -105,11 +105,22 @@ h3 {
     margin-top: -0.85rem;
 }
 
+#top_banner .icon {
+    margin: 0 0 -0.5rem;
+    height: 1.3rem;
+    border: none;
+    padding: 0;
+}
+
 /* Navigation section */
 
 #navigation_sect {
     margin-left: 10px;
     padding: 0;
+}
+
+#navigation_sect * {
+    margin-right: 0.3rem;
 }
 
 /* Top banner language section*/
