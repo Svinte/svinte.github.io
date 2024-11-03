@@ -1,4 +1,4 @@
-import Email from '/script/_email.js';
+import Email from '/script/email.js';
 
 /**
  * Website core script features
