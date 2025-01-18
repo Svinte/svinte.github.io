@@ -9,7 +9,7 @@ body {
 
 /* Document content */
 
-#body {
+main {
     margin-top: 8rem;
     min-height: 50vh;
 }
@@ -40,9 +40,8 @@ h3 {
     padding-right: 1.5rem;
     display: inline-table;
 }
-#body a {
+main a {
     font-weight: bolder;
-
 }
 
 /* Document images */
@@ -69,35 +68,35 @@ h3 {
 
 /* Top banner */
 
-#top_banner {
+header {
     height: auto;
     padding: 1.85rem;
     font-size: 1rem;
     text-align: left;
     box-shadow: 1px 2px 12px currentColor;
 }
-#top_banner section {
+header section {
     width: max-content;
     display: inline;
     padding: 0;
 }
-#top_banner * {
+header * {
     font-weight: lighter;
     display: inline;
 }
-#top_banner p {
+header p {
     font-size: 1rem;
     font-family: courier;
     margin-left: 4rem;
 }
-#top_banner a {
+header a {
     text-decoration: underline;
     font-style: italic;
 }
 
 /* Top banner logo section */
 
-#top_banner img:not(.icon) {
+header img:not(.icon) {
     width: 2.7rem;
     border-radius: 12px;
     display: inline;
@@ -105,7 +104,7 @@ h3 {
     margin-top: -0.85rem;
 }
 
-#top_banner .icon {
+header .icon {
     margin: 0 0 -0.5rem;
     height: 1.3rem;
     border: none;
@@ -137,30 +136,30 @@ h3 {
 
 /* Bottom banner */
 
-#bottom_banner {
+footer {
     margin-top: 10vh;
     padding: 5vh 2rem 0 2rem;
     overflow: auto;
 }
-#bottom_banner section:not(#bottom_banner section section) {
+footer section:not(footer section section) {
     display: flex;
     justify-content: center;
     margin-bottom: 5rem;
 }
-#bottom_banner section section:not(#bottom_banner section section section) {
+footer section section:not(footer section section section) {
     width: max-content;
     max-width: 700px;
     margin: auto;
     display: block;
     padding: 0 20px 0 20px;
 }
-#bottom_banner section section section {
+footer section section section {
     display: inline-block;
 }
 
 /* Bottom banner images */
 
-#bottom_banner .logo {
+footer .logo {
     height: 2.3rem;
     width: auto;
     box-sizing: border-box;
@@ -168,13 +167,13 @@ h3 {
 
 /* Bottom banner texts */
 
-#bottom_banner p {
+footer p {
     font-size: 0.9rem;
     font-weight: lighter;
     margin: 0 0 7px 0;
     text-align: left;
 }
-#bottom_banner a {
+footer a {
     font-style: italic;
 }
 
@@ -192,10 +191,10 @@ h3 {
     }
 }
 @media only screen and (max-width: 599px) {
-    #bottom_banner .logo {
+    footer .logo {
         height: 1rem;
     }
-    #bottom_banner p {
+    footer p {
         font-size: 0.4rem;
         min-width: fit-content;
     }
@@ -213,7 +212,7 @@ h3 {
     }
 }
 @media only screen and (min-width: 2250px) {
-    #bottom_banner section section:not(#bottom_banner section section section) {
+    footer section section:not(footer section section section) {
         text-align: center;
         margin: 0 2rem 0 2rem;
     }

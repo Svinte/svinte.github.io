@@ -3,24 +3,24 @@
 body {
     background-color: white;
 }
-#body {
+main {
     color: black;
 }
-#body a {
+main a {
     color: rgb(197, 138, 27);
 }
 
 /* Top banner */
 
-#top_banner {
+header {
     border-bottom: 2px ridge rgb(206, 141, 19);
     background-color: rgb(27, 24, 24);
     color: white;
 }
-#top_banner a {
+header a {
     color: white;
 }
-#top_banner img {
+header img {
     border: 1px solid rgba(255, 255, 255, 0.5);
 
 }
@@ -34,7 +34,7 @@ body {
 
 /* Bottom banner */
 
-#bottom_banner {
+footer {
     background-color: rgb(27, 24, 24);
     border-top: 1px ridge rgb(206, 141, 19);
     box-shadow: 1px 1px 12px black;
@@ -42,11 +42,10 @@ body {
 #logo_sect {
     border-right: 1px solid white;
 }
-#bottom_banner p {
+footer p {
     color: white;
 
 }
-#bottom_banner a {
+footer a {
     color: white;
-
 }
