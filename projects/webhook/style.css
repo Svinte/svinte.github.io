@@ -1,0 +1,106 @@
+body
+{
+    background-color: rgb(22, 26, 26);
+    max-width: 100vW;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+header
+{
+    background-color: rgb(22, 26, 26);
+    border-bottom: 1px solid #7e7b7b;
+    user-select: none;
+    text-align: right;
+    padding: 0.8rem 0;
+    color: #7e7b7b;
+    width: 100%;
+}
+
+main
+{
+    color: rgb(226, 222, 222);
+    padding: 1rem;
+}
+
+footer
+{
+    background-color: rgb(22, 26, 26);
+    border-top: 1px solid #7e7b7b;
+    text-align: center;
+    padding: 0.8rem 0;
+    color: #7e7b7b;
+    width: 100%;
+}
+
+input:not([type="submit"]), textarea
+{
+    background-color: rgb(16, 19, 19);
+    color: rgb(226, 222, 222);
+    border: #7e7b7b 1px solid;
+    width: min(100%, 30rem);
+    border-radius: 3px;
+    margin: 1rem 0;
+    display: block;
+    outline: none;
+}
+input:focus, textarea:focus
+{
+    border-color: darkcyan;
+}
+
+pre
+{
+    padding: 0.5rem;
+    border-radius: 3px;
+    border: #7e7b7b 1px solid;
+    background-color: rgb(16, 19, 19);
+}
+
+.remove
+{
+    display: none;
+}
+
+.form__section
+{
+    margin: 1.5rem 0;
+}
+
+.btn
+{
+    transition: background-color 0.3s, color 0.3s;
+    background-color: rgb(16, 19, 19);
+    color: rgb(226, 222, 222);
+    border: #7e7b7b 1px solid;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 3px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 1rem 0;
+}
+.btn:hover:not(.btn--header)
+{
+    border-color: darkcyan;
+    color: darkcyan;
+}
+.btn--header
+{
+    background-color: transparent;
+    border: 1px solid transparent;
+    box-sizing: border-box;
+    margin: 0.2rem 0.5rem;
+    padding: 0 0.1rem;
+}
+.btn--header:hover
+{
+    border-bottom: 1px solid darkcyan;
+    color: darkcyan;
+}
+
+.hidden
+{
+    display: none;
+    background-color: red;
+}

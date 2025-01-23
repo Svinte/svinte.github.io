@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join server</title>
+    <meta name="description" content="Invite form webhook">
+    <link rel="stylesheet" href="style.css">
+    <script src="action.js"></script>
+    <meta name="robots" content="noindex">
+</head>
+<body>
+    <header>
+        <a class="btn btn--header" href="#users">users</a>
+        <span>/</span>
+        <a class="btn btn--header" href="#dev">dev</a>
+    </header>
+
+    <main>
+        <section class="page" id="users">
+            <hr class="remove">
+
+            <h1>Application form</h1>
+            <p>Please write down atleast your Discord username, so we can check your profile.</p>
+
+            <h2>What should I tell?</h2>
+            <p>Tell us about your interest in investing and technology.</p>
+
+            <form action="https://discord.com/api/webhooks/1331996799531221024/UM6C5MXobsX7c56AiveIV5Ue9w7ki7UpgdwwI_-sa_9iA5N4mgYp12RIYB0dsHf19BDa" method="post">
+                <section class="form__section">
+                    <label for="username">Discord username*</label>
+                    <input type="text" name="username" placeholder="Username" required>
+                </section>
+
+                <section class="form__section">
+                    <label for="content">Write your style free application</label>
+                    <textarea type="text" name="content" placeholder="content"></textarea>
+                </section>
+
+                <input type="submit" class="btn">
+            </form>
+        </section>
+
+        <section class="page" id="dev">
+            <h1>Developpers</h1>
+            <p>If you want, you can recreate this form by using the same webhook. Not appropriate messages will be deleted.</p>
+
+            <br>
+
+            <label for="webhook_link">Webhook link:</label>
+            <pre id="webhook_link">https://discord.com/api/webhooks/1331996799531221024/UM6C5MXobsX7c56AiveIV5Ue9w7ki7UpgdwwI_-sa_9iA5N4mgYp12RIYB0dsHf19BDa</pre>
+
+            <br>
+
+            <label for="hidden_field">Please add service name to your form.</label>
+            <pre id="hidden_field">&lt;input type="hidden" name="service" value="service_name"></pre>
+            <label for="structure_service">Or by adding it to json</label>
+            <pre id="structure_service">{ "service": "service_name" }</pre>
+
+            <br>
+
+            <p>With service tag we can count forms sent using service.</p>
+        </section>
+    </main>
+
+    <footer>
+        <hr class="remove">
+        <p>© Svante Kokkoniemi, 2025</p>
+    </footer>
+</body>
+</html>
