@@ -1,0 +1,73 @@
+$color-bg:           #10111a;
+$color-surface:      #1a1a2e;
+$color-surface-alt:  #2a2a40;
+
+$color-primary:       #6c63ff;
+$color-primary-hover: #857eff;
+
+$color-secondary:       #3f8efc;
+$color-secondary-hover: #65a4ff;
+
+$color-accent:       #9a6cff;
+
+$color-text:         #e4e4f0;
+$color-text-muted:   #8c8c96;
+
+$color-border:       #33334d;
+
+$color-success:      #00c896;
+$color-warning:      #f4c430;
+$color-error:        #ff4c5b;
+
+
+$body-bg: $color-bg;
+$body-color: $color-text;
+
+$light:     $color-text-muted;
+$secondary: $color-secondary;
+$dark:      $color-surface;
+$primary:   $color-primary;
+$success:   $color-success;
+$warning:   $color-warning;
+$info:      $color-accent;
+$danger:    $color-error;
+
+$link-color:            $color-secondary;
+$link-hover-color:      $color-secondary-hover;
+$text-muted:            $color-text-muted;
+
+$card-bg:               $color-surface;
+$modal-content-bg:      $color-surface;
+$dropdown-bg:           $color-surface;
+$popover-bg:            $color-surface;
+$tooltip-bg:            $color-surface-alt;
+
+$border-color:          $color-border;
+
+$navbar-dark-color:           $color-text;
+$navbar-dark-hover-color:     $color-text;
+$navbar-dark-active-color:    $color-primary;
+$navbar-dark-bg:              rgba($color-bg, 0.9);
+
+$dropdown-link-color:         $color-text;
+$dropdown-link-hover-color:   $color-primary;
+$dropdown-link-hover-bg:      $color-surface-alt;
+
+$form-check-input-checked-bg-color: $color-primary;
+$form-select-bg: $color-surface;
+$form-select-color: $color-text;
+$input-bg: $color-surface;
+$input-color: $color-text;
+
+$btn-color: $color-text;
+$btn-bg: $color-primary;
+$btn-hover-bg: $color-primary-hover;
+
+$alert-bg-level:  $color-surface;
+$alert-border-level: $color-border;
+$alert-color-level: $color-text;
+
+
+$font-family-base:   'Inter', sans-serif;
+$font-weight-base:   400;
+$font-weight-bold:   600;

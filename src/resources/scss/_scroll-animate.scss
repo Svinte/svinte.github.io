@@ -1,0 +1,38 @@
+:root {
+    --focus-min: 0.3;
+    --focus-max: 1;
+}
+
+.scroll-animate {
+    transition: opacity 480ms ease, filter 220ms ease, transform 220ms ease;
+    will-change: transform, opacity, filter;
+    margin: 25vh 0;
+    --focus: 0;
+    opacity: 0;
+
+    transform: translateY(calc(18px * (1 - var(--focus)))) scale(calc(0.98 + (var(--focus) * 0.05)));
+
+    filter: brightness(calc(var(--focus-min) + (var(--focus) * (var(--focus-max) - var(--focus-min)))));
+
+    & + .scroll-animate {
+        margin: 35vh 0;
+    }
+}
+
+.scroll-animate.in-view {
+    opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .scroll-animate {
+        transition: none;
+        transform: none;
+        opacity: 1;
+        filter: none;
+        --focus: 1;
+    }
+}
+
+.hero-section.scroll-animate {
+    transition-duration: 680ms;
+}
