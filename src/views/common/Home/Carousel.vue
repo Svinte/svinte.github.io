@@ -1,3 +1,8 @@
+<script setup lang="ts">
+import { RouterLink } from 'vue-router';
+
+</script>
+
 <template>
     <div id="Carousel" class="carousel slide position-relative" data-bs-ride="carousel">
 
@@ -39,7 +44,7 @@
                 <p>Tällä tekstillä ei ole visuaalista painoa. Tarkoitus on vain kutsua käyttäjä jatkamaan sivuston selausta.</p>
 
                 <div class="mx-auto mt-5 d-flex justify-content-center">
-                    <a href="" class="btn btn-warning col-3"><span>Read more</span></a>
+                    <RouterLink to="/about" class="btn btn-warning col-3"><span>Read more</span></RouterLink>
                 </div>
             </div>
 

@@ -1,0 +1,32 @@
+[
+  {
+    "name": "svinte.github.io-v1",
+    "description": null,
+    "url": "https://github.com/Svinte/svinte.github.io-v1",
+    "stargazerCount": 0,
+    "forkCount": 0,
+    "primaryLanguage": {
+      "name": "HTML"
+    }
+  },
+  {
+    "name": "FrontCloner",
+    "description": "Laravel package for frontend cloning and optimization.",
+    "url": "https://github.com/Svinte/FrontCloner",
+    "stargazerCount": 0,
+    "forkCount": 0,
+    "primaryLanguage": {
+      "name": "PHP"
+    }
+  },
+  {
+    "name": "Botsafe",
+    "description": "Scripts to prevent Web scraping",
+    "url": "https://github.com/Svinte/Botsafe",
+    "stargazerCount": 0,
+    "forkCount": 0,
+    "primaryLanguage": {
+      "name": "TypeScript"
+    }
+  }
+]

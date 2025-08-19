@@ -51,7 +51,7 @@
         <section class="container row text-center text-md-start mx-auto mt-5">
             <div class="col-12 d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
                 <p class="mb-0">&copy; Svante Kokkoniemi 2024–2025, MIT</p>
-                <p class="mb-0">Hosted on GitHub Sites.</p>
+                <p class="mb-0">Hosted on GitHub Pages.</p>
             </div>
         </section>
     </footer>
