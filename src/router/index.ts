@@ -6,16 +6,16 @@ import Projects from '@/views/Projects.vue'
 import NotFound from '@/views/error/404.vue'
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
-  routes: [
-    { path: '/', name: 'Home', component: Home },
-    { path: '/about', name: 'About', component: About },
-    { path: '/contact', name: 'Contact', component: Contact },
-    { path: '/projects', name: 'Projects', component: Projects },
+    history: createWebHistory(import.meta.env.BASE_URL),
+    routes: [
+        { path: '/', name: 'Home', component: Home },
+        { path: '/about', name: 'About', component: About },
+        { path: '/contact', name: 'Contact', component: Contact },
+        { path: '/projects', name: 'Projects', component: Projects },
 
-    // Errors
-    { path: '/:pathMatch(.*)', name: 'NotFound', component: NotFound },
-  ],
+        // Errors
+        { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound }
+    ],
 })
 
 export default router
