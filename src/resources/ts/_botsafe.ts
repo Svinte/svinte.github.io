@@ -28,16 +28,24 @@ function isEmail(text: string): boolean {
  */
 function botsafeInit(): void {
     const botsafeElements = document.querySelectorAll(".botsafe");
+    initializeElements(botsafeElements);
+}
 
-    // Add reassembler event listener to link.
-    botsafeElements.forEach((element) => {
+/**
+ * Initialize Botsafe elements with event listeners
+ */
+function initializeElements(elements: NodeListOf<Element>): void {
+    elements.forEach((element) => {
         if (!(element instanceof HTMLAnchorElement)) return;
+
+        // Skip if already initialized
+        if (element.hasAttribute('data-botsafe-initialized')) return;
+        element.setAttribute('data-botsafe-initialized', 'true');
 
         const reassembleOn = element.getAttribute("data-reassemble-on");
 
         if (reassembleOn === 'load') {
             reassemble.call(element, new Event('synthetic'));
-
             return;
         }
 
@@ -45,8 +53,20 @@ function botsafeInit(): void {
             element.dataset.botsafeEvent = reassembleOn;
             element.addEventListener(reassembleOn, reassemble);
         }
-    })
+    });
 }
+
+// Create MutationObserver to watch for new elements
+const observer = new MutationObserver((mutations) => {
+    mutations.forEach((mutation) => {
+        if (mutation.addedNodes.length) {
+            const newBotsafeElements = document.querySelectorAll(".botsafe:not([data-botsafe-initialized])");
+            if (newBotsafeElements.length > 0) {
+                initializeElements(newBotsafeElements);
+            }
+        }
+    });
+});
 
 /**
  * Reassemble link content.
@@ -90,6 +110,13 @@ function reassemble(this: HTMLElement, event: Event): void {
     this.removeAttribute("data-reassemble-on");
 }
 
-
 // Run when DOM loaded.
-document.addEventListener("DOMContentLoaded", botsafeInit);
+document.addEventListener("DOMContentLoaded", () => {
+    botsafeInit();
+    
+    // Start observing the entire document for changes
+    observer.observe(document.body, {
+        childList: true,
+        subtree: true
+    });
+});
