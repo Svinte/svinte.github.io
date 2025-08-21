@@ -17,6 +17,10 @@
     & + .scroll-animate {
         margin: 35vh 0;
     }
+
+    &:first-of-type {
+        margin-top: 10vh;
+    }
 }
 
 .scroll-animate.in-view {
