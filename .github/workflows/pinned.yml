@@ -1,9 +1,15 @@
 name: Update pinned.json
 
 on:
+  push:
+    branches:
+      - main
   schedule:
     - cron: "0 3 */3 * *"
   workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   update-pinned:
@@ -11,6 +17,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
@@ -27,8 +35,8 @@ jobs:
 
       - name: Commit changes
         run: |
-          git config user.name github-actions
-          git config user.email github-actions@github.com
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add src/assets/pinned.json
           git commit -m "chore: update pinned.json" || echo "No changes"
           git push
