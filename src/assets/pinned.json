@@ -1,15 +1,5 @@
 [
   {
-    "name": "svinte.github.io-v1",
-    "description": null,
-    "url": "https://github.com/Svinte/svinte.github.io-v1",
-    "stargazerCount": 0,
-    "forkCount": 0,
-    "primaryLanguage": {
-      "name": "HTML"
-    }
-  },
-  {
     "name": "FrontCloner",
     "description": "Laravel package for frontend cloning and optimization.",
     "url": "https://github.com/Svinte/FrontCloner",
@@ -27,6 +17,16 @@
     "forkCount": 0,
     "primaryLanguage": {
       "name": "TypeScript"
+    }
+  },
+  {
+    "name": "svinte.github.io",
+    "description": "Vue.js GitHub User Pages",
+    "url": "https://github.com/Svinte/svinte.github.io",
+    "stargazerCount": 0,
+    "forkCount": 0,
+    "primaryLanguage": {
+      "name": "Vue"
     }
   }
 ]
