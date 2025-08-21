@@ -1,21 +1,52 @@
-name: Deploy Vue.js site to GitHub Pages
+name: Update pinned and deploy site
 
 on:
   push:
     branches:
       - main
+  schedule:
+    - cron: "0 3 */3 * *"
+  workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
 jobs:
-  build:
+  update-pinned:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Fetch pinned repos
+        run: npm run fetch:pinned
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/assets/pinned.json
+          git commit -m "chore: update pinned.json" || echo "No changes"
+          git push
+
+  build:
+    runs-on: ubuntu-latest
+    needs: update-pinned
+    steps:
+      - uses: actions/checkout@v4
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
