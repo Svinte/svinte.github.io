@@ -28,5 +28,15 @@
     "primaryLanguage": {
       "name": "Vue"
     }
+  },
+  {
+    "name": "Wordle-Solver",
+    "description": "Python Wordle game solver",
+    "url": "https://github.com/Svinte/Wordle-Solver",
+    "stargazerCount": 0,
+    "forkCount": 0,
+    "primaryLanguage": {
+      "name": "Python"
+    }
   }
 ]
