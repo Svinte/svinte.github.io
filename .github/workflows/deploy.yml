@@ -1,4 +1,4 @@
-name: Update pinned, translate and deploy site
+name: Update pinned, translate, build and deploy site
 
 on:
   push:
@@ -14,10 +14,11 @@ permissions:
   id-token: write
 
 jobs:
-  update-pinned:
+  deploy-all:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
@@ -57,58 +58,27 @@ jobs:
           git commit -m "chore: update pinned.json and translations" || echo "No changes"
           git push
 
-  build:
-    runs-on: ubuntu-latest
-    needs: update-pinned
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Build
+      - name: Build site
         run: npm run build-only
 
       - name: Create 404.html fallback
         run: cp dist/index.html dist/404.html
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./dist
-
-  deploy:
-    concurrency:
-      group: github-pages
-      cancel-in-progress: true
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Install GitHub CLI
+      - name: Wait until no Pages deployment is in progress
         run: |
-          sudo apt update
-          sudo apt install -y gh
-
-      - name: Wait for previous Pages deployment if exists
-        run: |
-          echo "Checking for ongoing Pages deployment..."
+          echo "Waiting for any ongoing Pages deployment to finish..."
           while true; do
-            status=$(gh api repos/${GITHUB_REPOSITORY}/pages/deployment --jq '.status' 2>/dev/null || echo "none")
-            if [[ "$status" == "in_progress" ]] || [[ "$status" == "building" ]]; then
-              echo "Previous deployment status: $status. Waiting 15s..."
+            deployment_id=$(gh api repos/${GITHUB_REPOSITORY}/pages/deployment --jq '.[0].id' 2>/dev/null || echo "")
+            if [ -z "$deployment_id" ]; then
+              echo "No deployment found. Proceeding..."
+              break
+            fi
+            status=$(gh api repos/${GITHUB_REPOSITORY}/pages/deployment/$deployment_id --jq '.status')
+            if [[ "$status" == "in_progress" || "$status" == "building" ]]; then
+              echo "Deployment $deployment_id status: $status. Waiting 15s..."
               sleep 15
             else
-              echo "No ongoing deployment. Proceeding..."
+              echo "Deployment $deployment_id completed. Proceeding..."
               break
             fi
           done
