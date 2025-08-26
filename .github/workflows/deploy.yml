@@ -1,9 +1,12 @@
-name: Deploy Vue.js site
+name: Build and Deploy Vue.js site
 
 on:
   push:
     branches:
       - main
+
+permissions:
+  contents: write
 
 jobs:
   build-and-deploy:
@@ -50,12 +53,12 @@ jobs:
       - name: Build Vue.js site
         run: npm run build
 
-      # Deploy to main branch (GitHub Pages)
+      # Deploy to gh-pages branch
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3.9.3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: main       # main-haara julkaisuun
+          publish_branch: gh-pages
           publish_dir: ./dist
           keep_files: false
           user_name: "github-actions[bot]"
