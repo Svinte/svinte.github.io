@@ -88,17 +88,21 @@ jobs:
         run: |
           sudo apt update
           sudo apt install -y gh
-          
-      - name: Wait for previous Pages deployment to finish
+
+      - name: Wait for previous Pages deployment if exists
         run: |
-          echo "Checking for ongoing GitHub Pages deployments..."
-          prev_deploy=$(gh api repos/${GITHUB_REPOSITORY}/pages/deployment --jq '.status')
-          while [ "$prev_deploy" = "in_progress" ] || [ "$prev_deploy" = "building" ]; do
-            echo "Previous deployment status: $prev_deploy. Waiting 15s..."
-            sleep 15
+          if gh api repos/${GITHUB_REPOSITORY}/pages/deployment --silent > /dev/null 2>&1; then
+            echo "Previous deployment exists. Waiting for completion..."
             prev_deploy=$(gh api repos/${GITHUB_REPOSITORY}/pages/deployment --jq '.status')
-          done
-          echo "No ongoing deployment. Proceeding..."
+            while [ "$prev_deploy" = "in_progress" ] || [ "$prev_deploy" = "building" ]; do
+              echo "Previous deployment status: $prev_deploy. Waiting 15s..."
+              sleep 15
+              prev_deploy=$(gh api repos/${GITHUB_REPOSITORY}/pages/deployment --jq '.status')
+            done
+            echo "No ongoing deployment. Proceeding..."
+          else
+            echo "No previous Pages deployment. Proceeding immediately."
+          fi
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
