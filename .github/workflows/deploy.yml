@@ -34,12 +34,17 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Generate language colors via Gemini
+        run: npm run colors:update
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+
       - name: Commit changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add src/assets/pinned.json
-          git commit -m "chore: update pinned.json" || echo "No changes"
+          git commit -m "chore: update pinned.json with colors" || echo "No changes"
           git push
 
   build:

@@ -12,7 +12,9 @@
                         <p class="card-text text-light">{{ repo.description }}</p>
 
                         <div class="d-flex gap-3 text-secondary small">
-                            <span v-if="repo.primaryLanguage">{{ repo.primaryLanguage.name }}</span>
+                            <span v-if="repo.primaryLanguage" :style="{ color: repo.color }">
+                                {{ repo.primaryLanguage.name }}
+                            </span>
                             <span>⭐ {{ repo.stargazerCount }}</span>
                             <span>🍴 {{ repo.forkCount }}</span>
                         </div>

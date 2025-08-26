@@ -7,7 +7,8 @@
     "forkCount": 0,
     "primaryLanguage": {
       "name": "PHP"
-    }
+    },
+    "color": "#8892BF"
   },
   {
     "name": "Botsafe",
@@ -17,7 +18,8 @@
     "forkCount": 0,
     "primaryLanguage": {
       "name": "TypeScript"
-    }
+    },
+    "color": "#52A0EE"
   },
   {
     "name": "svinte.github.io",
@@ -27,6 +29,18 @@
     "forkCount": 0,
     "primaryLanguage": {
       "name": "Vue"
-    }
+    },
+    "color": "#42b883"
+  },
+  {
+    "name": "Wordle-Solver",
+    "description": "Python Wordle game solver",
+    "url": "https://github.com/Svinte/Wordle-Solver",
+    "stargazerCount": 0,
+    "forkCount": 0,
+    "primaryLanguage": {
+      "name": "Python"
+    },
+    "color": "#FFD43B"
   }
 ]
