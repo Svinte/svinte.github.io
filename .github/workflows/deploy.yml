@@ -101,18 +101,17 @@ jobs:
 
       - name: Wait for previous Pages deployment if exists
         run: |
-          if gh api repos/${GITHUB_REPOSITORY}/pages/deployment --silent > /dev/null 2>&1; then
-            echo "Previous deployment exists. Waiting for completion..."
-            prev_deploy=$(gh api repos/${GITHUB_REPOSITORY}/pages/deployment --jq '.status')
-            while [ "$prev_deploy" = "in_progress" ] || [ "$prev_deploy" = "building" ]; do
-              echo "Previous deployment status: $prev_deploy. Waiting 15s..."
+          echo "Checking for ongoing Pages deployment..."
+          while true; do
+            status=$(gh api repos/${GITHUB_REPOSITORY}/pages/deployment --jq '.status' 2>/dev/null || echo "none")
+            if [[ "$status" == "in_progress" ]] || [[ "$status" == "building" ]]; then
+              echo "Previous deployment status: $status. Waiting 15s..."
               sleep 15
-              prev_deploy=$(gh api repos/${GITHUB_REPOSITORY}/pages/deployment --jq '.status')
-            done
-            echo "No ongoing deployment. Proceeding..."
-          else
-            echo "No previous Pages deployment. Proceeding immediately."
-          fi
+            else
+              echo "No ongoing deployment. Proceeding..."
+              break
+            fi
+          done
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
