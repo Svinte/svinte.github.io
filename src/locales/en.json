@@ -5,7 +5,7 @@
       "1": "More efficient",
       "2": "Faster",
       "3": "Safer",
-      "4": "More durable",
+      "4": "More robust",
       "5": "Better"
     },
     "subtitle": "Since 2021.",
@@ -14,13 +14,13 @@
     "carousel": {
       "1": {
         "title": "More efficient solutions",
-        "text": "I build websites that run quickly and smoothly on all devices.",
+        "text": "I build websites that run fast and smoothly on all devices.",
         "img": "/images/cozy.png",
         "img_alt": "Modern web application",
         "color_class": "text-success"
       },
       "2": {
-        "title": "More striking user interfaces",
+        "title": "More visually appealing interfaces",
         "text": "I design visually appealing and user-friendly solutions.",
         "img": "/images/undraw_working-from-anywhere.svg",
         "img_alt": "User interface design",
@@ -38,7 +38,7 @@
     },
     "achievements": {
       "header": "Project highlights",
-      "text": "Explore my significant projects and successes that demonstrate my skills and experience."
+      "text": "Explore my significant projects and successes, which demonstrate my skills and experience."
     },
     "close_section": {
       "header": "Get in touch",
@@ -49,15 +49,15 @@
   "about": {
     "title": "About me",
     "header_1": "Who am I?",
-    "content_1": "I am Svante Kokkoniemi, a Finnish web developer. I build fast and polished web applications using modern technologies.",
+    "content_1": "I am Svante Kokkoniemi, a Finnish web developer. I build fast and polished web applications with modern technologies.",
     "header_2": "How did I start?",
     "content_2": "Programming started as a hobby and grew into a profession. I am motivated by creating solutions that combine usability, efficiency, and visual appeal.",
-    "header_3": "Path and interests",
-    "content_3": "I have learned independently and through projects. Currently, I focus particularly on frontend technologies, AI integration, and SEO optimization.",
+    "header_3": "My path and interests",
+    "content_3": "I have learned independently and through projects. Currently, I focus especially on frontend technologies, AI integration, and SEO optimization.",
     "projects_link": "Explore projects"
   },
   "projects": {
-    "title": "Featured projects"
+    "title": "Pinned projects"
   },
   "contact": {
     "title": "Contact me",
@@ -73,7 +73,7 @@
     "contact": "Contact me"
   },
   "footer": {
-    "host": "Hosted by GitHub Pages.",
-    "botsafe": "click to open"
+    "host": "Hosted on GitHub Pages.",
+    "botsafe": "press to open"
   }
 }
