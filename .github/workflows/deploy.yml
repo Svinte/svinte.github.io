@@ -78,14 +78,15 @@ jobs:
 
       - name: Wait for previous Pages deployment
         run: |
-          echo "Waiting for any ongoing Pages deployment to finish..."
+          REPO="${GITHUB_REPOSITORY}"
+          echo "Waiting for any ongoing Pages deployment to finish for $REPO..."
           while true; do
-            deployment_id=$(gh api repos/${GITHUB_REPOSITORY}/pages/deployment --jq '.[0].id' 2>/dev/null || echo "")
+            deployment_id=$(gh api repos/$REPO/pages/deployment --jq '.[0].id' 2>/dev/null || echo "")
             if [ -z "$deployment_id" ]; then
               echo "No deployment found. Proceeding..."
               break
             fi
-            status=$(gh api repos/${GITHUB_REPOSITORY}/pages/deployment/$deployment_id --jq '.status')
+            status=$(gh api repos/$REPO/pages/deployment/$deployment_id --jq '.status')
             if [[ "$status" == "in_progress" || "$status" == "building" ]]; then
               echo "Deployment $deployment_id status: $status. Waiting 15s..."
               sleep 15
