@@ -1,103 +1,61 @@
-name: GitHub Pages Full Workflow
+name: Deploy Vue.js site
 
 on:
   push:
     branches:
       - main
-  workflow_dispatch:
-
-permissions:
-  contents: write
-  pages: write
-  id-token: write
 
 jobs:
-  full-deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
+      # Checkout repositorio
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      # Setup Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
+          cache: "npm"
 
+      # Install dependencies
       - name: Install dependencies
         run: npm ci
 
-      - name: Fetch pinned repos
+      # Set environment variables
+      - name: Set environment variables
+        run: |
+          echo "GEMINI_API_KEY=${{ secrets.GEMINI_API_KEY }}" >> $GITHUB_ENV
+          echo "GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}" >> $GITHUB_ENV
+
+      # Suorita fetch pinned
+      - name: Fetch pinned
         run: npm run fetch:pinned
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Generate language colors via Gemini
+      # Update colors
+      - name: Update colors
         run: npm run colors:update
-        env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
 
-      - name: Commit pinned updates
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add src/assets/pinned.json
-          git commit -m "chore: update pinned.json" || echo "No changes"
-          git push
-
-      - name: Generate pinned translations
+      # Translate pinned
+      - name: Translate pinned
         run: npm run translate:pinned
-        env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
 
-      - name: Commit pinned translations
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add src/locales
-          git commit -m "chore: update pinned translations" || echo "No changes"
-          git push
-
-      - name: Generate content translations
+      # Translate content
+      - name: Translate content
         run: npm run translate:content
-        env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
 
-      - name: Commit content translations
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add src/locales
-          git commit -m "chore: update content translations" || echo "No changes"
-          git push
+      # Build Vue.js site
+      - name: Build Vue.js site
+        run: npm run build
 
-      - name: Build site
-        run: npm run build-only
-
-      - name: Create 404.html fallback
-        run: cp dist/index.html dist/404.html
-
-      - name: Wait for previous Pages deployment
-        run: |
-          REPO="${GITHUB_REPOSITORY}"
-          echo "Waiting for any ongoing Pages deployment to finish for $REPO..."
-          while true; do
-            deployment_id=$(gh api repos/$REPO/pages/deployment --jq '.[0].id' 2>/dev/null || echo "")
-            if [ -z "$deployment_id" ]; then
-              echo "No deployment found. Proceeding..."
-              break
-            fi
-            status=$(gh api repos/$REPO/pages/deployment/$deployment_id --jq '.status')
-            if [[ "$status" == "in_progress" || "$status" == "building" ]]; then
-              echo "Deployment $deployment_id status: $status. Waiting 15s..."
-              sleep 15
-            else
-              echo "Deployment $deployment_id completed. Proceeding..."
-              break
-            fi
-          done
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
+      # Deploy GitHub Pages
       - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+        uses: peaceiris/actions-gh-pages@v6
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist  # oletetaan, että build output on dist/
+          keep_files: false
+          user_name: "github-actions[bot]"
+          user_email: "github-actions[bot]@users.noreply.github.com"
