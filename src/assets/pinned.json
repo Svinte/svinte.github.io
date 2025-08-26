@@ -8,7 +8,7 @@
     "primaryLanguage": {
       "name": "PHP"
     },
-    "color": "#777BB4"
+    "color": "#8892BF"
   },
   {
     "name": "Botsafe",
@@ -19,7 +19,7 @@
     "primaryLanguage": {
       "name": "TypeScript"
     },
-    "color": "#007ACC"
+    "color": "#0092FF"
   },
   {
     "name": "svinte.github.io",
@@ -41,6 +41,6 @@
     "primaryLanguage": {
       "name": "Python"
     },
-    "color": "#FFD43B"
+    "color": "#FFE873"
   }
 ]
