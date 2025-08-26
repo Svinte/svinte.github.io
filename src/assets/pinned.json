@@ -7,7 +7,7 @@
     "primaryLanguage": {
       "name": "PHP"
     },
-    "color": "#777BB4",
+    "color": "#787CB4",
     "description_en": "Laravel package for frontend cloning and optimization.",
     "description_fi": "Laravel-paketti käyttöliittymän kloonaamiseen ja optimointiin."
   },
@@ -19,9 +19,9 @@
     "primaryLanguage": {
       "name": "TypeScript"
     },
-    "color": "#3178C6",
+    "color": "#4D9DE0",
     "description_en": "Scripts to prevent Web scraping",
-    "description_fi": "Skriptit verkkoskraappausta estämään"
+    "description_fi": "Web scrapingia estäviä skriptejä"
   },
   {
     "name": "svinte.github.io",
@@ -31,9 +31,9 @@
     "primaryLanguage": {
       "name": "Vue"
     },
-    "color": "#42B883",
+    "color": "#42b883",
     "description_en": "Vue.js GitHub User Pages",
-    "description_fi": "Vue.js GitHub Käyttäjäsivut"
+    "description_fi": "Vue.js GitHub käyttäjäsivut"
   },
   {
     "name": "Wordle-Solver",

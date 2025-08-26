@@ -1,27 +1,27 @@
 {
   "home": {
-    "title": "For Your Websites",
+    "title": "For websites",
     "text_carousel": {
       "1": "More efficient",
       "2": "Faster",
-      "3": "More secure",
-      "4": "More resilient",
+      "3": "Safer",
+      "4": "More sustainable",
       "5": "Better"
     },
     "subtitle": "Since 2021.",
-    "button_contact": "Contact me",
+    "button_contact": "Get in touch",
     "button_more": "Read more",
     "carousel": {
       "1": {
         "title": "More efficient solutions",
-        "text": "I build websites that run fast and smoothly on all devices.",
+        "text": "I build websites that run quickly and smoothly on all devices.",
         "img": "/images/cozy.png",
         "img_alt": "Modern web application",
         "color_class": "text-success"
       },
       "2": {
-        "title": "More visually appealing interfaces",
-        "text": "I design visually attractive and user-friendly solutions.",
+        "title": "More impressive user interfaces",
+        "text": "I design visually appealing and user-friendly solutions.",
         "img": "/images/undraw_working-from-anywhere.svg",
         "img_alt": "User interface design",
         "color_class": "text-warning"
@@ -38,12 +38,12 @@
     },
     "achievements": {
       "header": "Project highlights",
-      "text": "Explore my significant projects and successes, which demonstrate my skills and experience."
+      "text": "Explore my significant projects and successes that demonstrate my skills and experience."
     },
     "close_section": {
-      "header": "Get in Touch",
-      "text": "If you're interested, feel free to contact me – the opportunity to discuss new projects is always open.",
-      "button": "Contact me"
+      "header": "Leave a contact request",
+      "text": "If you are interested, please get in touch – the opportunity to discuss new projects is always open.",
+      "button": "Contact us"
     }
   },
   "about": {
@@ -60,7 +60,7 @@
     "title": "Pinned projects"
   },
   "contact": {
-    "title": "Contact me",
+    "title": "Contact us",
     "email": "Email",
     "github": "GitHub",
     "linkedin": "LinkedIn",
@@ -70,7 +70,7 @@
     "home": "Home",
     "about": "About me",
     "projects": "Projects",
-    "contact": "Contact me"
+    "contact": "Contact"
   },
   "footer": {
     "host": "Hosted by GitHub Pages.",
