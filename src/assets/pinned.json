@@ -19,7 +19,7 @@
     "primaryLanguage": {
       "name": "TypeScript"
     },
-    "color": "#0092FF"
+    "color": "#3B8CD6"
   },
   {
     "name": "svinte.github.io",
@@ -41,6 +41,6 @@
     "primaryLanguage": {
       "name": "Python"
     },
-    "color": "#FFE873"
+    "color": "#FFD43B"
   }
 ]
