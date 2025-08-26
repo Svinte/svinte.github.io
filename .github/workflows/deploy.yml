@@ -41,9 +41,13 @@ jobs:
 
       - name: Generate pinned translations
         run: npm run translate:pinned
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
 
       - name: Generate content translations
         run: npm run translate:content
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
 
       - name: Commit changes
         run: |
