@@ -1,26 +1,26 @@
 <template>
     <section id="contact">
     <div class="container mx-auto my-5 flex flex-col items-center col-5">
-        <h1 class="mb-4">Yhteystiedot:</h1>
+        <h1 class="mb-4">{{ t('contact.title') }}</h1>
         <ul>
-        <li>Sähköposti:
+        <li>{{ t('contact.email') }}:
             <Botsafe
             element="kokkoniemisvante@gmail.com"
-            text="Paina avataksesi"
+            :text="t('footer.botsafe')"
             reassemble="click"
             class="text-white text-nowrap"
             />
         </li>
 
-        <li>GitHub:
+        <li>{{ t('contact.github') }}:
             <a href="https://github.com/svinte" target="_blank" rel="noopener noreferrer" class="text-white text-nowrap">github.com/svinte</a>
         </li>
 
-        <li>LinkedIn:
+        <li>{{ t('contact.linkedin') }}:
             <a href="https://www.linkedin.com/in/svante-kokkoniemi" target="_blank" rel="noopener noreferrer" class="text-white text-nowrap">linkedin.com/in/svante-kokkoniemi</a>
         </li>
 
-        <li>Discord:
+        <li>{{ t('contact.discord') }}:
             <a href="https://discord.com/users/748136788349943859" target="_blank" rel="noopener noreferrer" class="text-white text-nowrap">svinte</a>
         </li>
         </ul>
@@ -28,6 +28,9 @@
     </section>
 </template>
 
-<script setup lang="ts">
+<script lang="ts" setup>
 import Botsafe from "@/components/Botsafe.vue";
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 </script>

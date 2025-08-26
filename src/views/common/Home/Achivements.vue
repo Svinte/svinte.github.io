@@ -11,8 +11,14 @@
         </figure>
 
         <div class="col-4">
-            <h2>Kerro saavutuksista</h2>
-            <p>Tämä ohjaa käyttäjää projektit sivulle.</p>
+            <h2>{{ t('home.achievements.header') }}</h2>
+            <p>{{ t('home.achievements.text') }}</p>
         </div>
     </section>
 </template>
+
+<script setup lang="ts">
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
+</script>

@@ -1,8 +1,3 @@
-<script setup lang="ts">
-import { RouterLink } from 'vue-router';
-
-</script>
-
 <template>
     <section id="who" class="row justify-content-center align-items-center gap-5">
         <figure class="col-md-4">
@@ -10,8 +5,14 @@ import { RouterLink } from 'vue-router';
         </figure>
 
         <div class="col-md-4">
-            <h2>Miten aloitin ohjelmoinnin ja mikä motivoi minua?</h2>
-            <p>Henkilökohtainen tausta — milloin aloitit, millainen polku on ollut ja mitkä asiat kiinnostavat nyt.</p>
+            <h2>{{ t('about.header_2') }}</h2>
+            <p>{{ t('about.content_2') }}</p>
         </div>
     </section>
 </template>
+
+<script setup lang="ts">
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
+</script>

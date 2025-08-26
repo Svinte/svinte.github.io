@@ -6,7 +6,7 @@
                     <img src="/icons/mail.svg" alt="email" height="24" />
                     <Botsafe
                         element="kokkoniemisvante@gmail.com"
-                        text="Paina avataksesi"
+                        :text="t('footer.botsafe')"
                         reassemble="click"
                         class="text-white text-nowrap"
                     />
@@ -47,11 +47,10 @@
             </div>
         </section>
 
-
         <section class="container row text-center text-md-start mx-auto mt-5">
             <div class="col-12 d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
                 <p class="mb-0">&copy; Svante Kokkoniemi 2024–2025, MIT</p>
-                <p class="mb-0">Hosted on GitHub Pages.</p>
+                <p class="mb-0">{{ t('footer.host') }}</p>
             </div>
         </section>
     </footer>
@@ -60,4 +59,7 @@
 
 <script setup lang="ts">
 import Botsafe from './Botsafe.vue';
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 </script>

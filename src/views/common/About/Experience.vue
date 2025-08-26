@@ -1,8 +1,8 @@
 <template>
     <section id="Experience" class="row justify-content-center align-items-center gap-5">
         <div class="col-6">
-            <h2>Mitkä ovat vahvimmat teknologiani ja työskentelytapani?</h2>
-            <p>Listaus avaintekniikoista + lyhyt lause työskentelyfilosofiasta (code quality, testaus, yksinkertaisuus, dokumentaatio).</p>
+            <h2>{{ t('about.header_3') }}</h2>
+            <p>{{ t('about.content_3') }}.</p>
 
             <RouterLink to="/projects" class="btn btn-primary mt-3">Tarkastele projekteja</RouterLink>
         </div>
@@ -12,3 +12,9 @@
         </figure>
     </section>
 </template>
+
+<script setup lang="ts">
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
+</script>

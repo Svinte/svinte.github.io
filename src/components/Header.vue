@@ -8,13 +8,40 @@
                 </RouterLink>
 
                 <ul class="nav">
-                    <li v-for="item in navItems" :key="item.path" class="nav-item">
+                    <li class="nav-item">
                         <RouterLink
-                            :to="item.path"
-                            :class="['nav-link', route.path === item.path ? 'active text-white' : 'text-white-50']"
+                            to="/"
+                            :class="['nav-link', route.path === '/' ? 'active text-white' : 'text-white-50']"
                             exact
                         >
-                            {{ item.label }}
+                            {{ t('header.home') }}
+                        </RouterLink>
+                    </li>
+                    <li class="nav-item">
+                        <RouterLink
+                            to="/about"
+                            :class="['nav-link', route.path === '/about' ? 'active text-white' : 'text-white-50']"
+                            exact
+                        >
+                            {{ t('header.about') }}
+                        </RouterLink>
+                    </li>
+                    <li class="nav-item">
+                        <RouterLink
+                            to="/projects"
+                            :class="['nav-link', route.path === '/projects' ? 'active text-white' : 'text-white-50']"
+                            exact
+                        >
+                            {{ t('header.projects') }}
+                        </RouterLink>
+                    </li>
+                    <li class="nav-item">
+                        <RouterLink
+                            to="/contact"
+                            :class="['nav-link', route.path === '/contact' ? 'active text-white' : 'text-white-50']"
+                            exact
+                        >
+                            {{ t('header.contact') }}
                         </RouterLink>
                     </li>
                 </ul>
@@ -25,23 +52,47 @@
         <div class="px-3 py-0">
         <div class="container d-flex justify-content-end">
             <div class="language-switcher">
-                <button class="btn text-light btn-sm me-2">Suomi</button>
-                <button class="btn text-light btn-sm">English</button>
+                <button
+                    class="btn text-light btn-sm me-2"
+                    :class="{ active: currentLang === 'fi' }"
+                    @click="changeLang('fi')"
+                >
+                    Suomi
+                </button>
+                <button
+                    class="btn text-light btn-sm"
+                    :class="{ active: currentLang === 'en' }"
+                    @click="changeLang('en')"
+                >
+                    English
+                </button>
+                </div>
             </div>
-        </div>
         </div>
     </header>
 </template>
 
 <script setup lang="ts">
-import { useRoute } from 'vue-router';
+import { useRoute } from 'vue-router'
+import { useI18n } from 'vue-i18n'
+import { ref, onMounted } from 'vue'
 
 const route = useRoute();
+const { t, locale } = useI18n()
+const currentLang = ref<string>('fi')
 
-const navItems = [
-    { path: '/', label: 'Home' },
-    { path: '/about', label: 'About' },
-    { path: '/projects', label: 'Projects' },
-    { path: '/contact', label: 'Contact' },
-]
+onMounted(() => {
+    const savedLang = sessionStorage.getItem('lang')
+
+    if (savedLang) {
+        locale.value = savedLang
+        currentLang.value = savedLang
+    }
+})
+
+function changeLang(lang: string) {
+    locale.value = lang
+    currentLang.value = lang
+    localStorage.setItem('lang', lang)
+}
 </script>

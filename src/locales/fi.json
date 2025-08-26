@@ -1,0 +1,79 @@
+{
+    "home": {
+        "title": "verkkosivujen puolesta",
+        "text_carousel": {
+            "1": "Tehokkaampien",
+            "2": "Nopeampien",
+            "3": "Turvallisempien",
+            "4": "Kestävempien",
+            "5": "Parempien"
+        },
+        "subtitle": "Jo vuodesta 2021.",
+        "button_contact": "Ota yhteyttä",
+        "button_more": "Lue lisää",
+        "carousel": {
+            "1": {
+            "title": "Tehokkaampia ratkaisuja",
+            "text": "Rakennan verkkosivustoja, jotka toimivat nopeasti ja sujuvasti kaikilla laitteilla.",
+            "img": "/images/cozy.png",
+            "img_alt": "Moderni web-sovellus",
+            "color_class": "text-success"
+            },
+            "2": {
+            "title": "Näyttävämpiä käyttöliittymiä",
+            "text": "Suunnittelen visuaalisesti houkuttelevia ja käyttäjäystävällisiä ratkaisuja.",
+            "img": "/images/undraw_working-from-anywhere.svg",
+            "img_alt": "Käyttöliittymän suunnittelu",
+            "color_class": "text-warning"
+            },
+            "3": {
+            "title": "Tutustu projekteihini",
+            "text": "Jatka eteenpäin ja tutustu projekteihini, jotka yhdistävät laadun ja käytettävyyden.",
+            "img": "/images/app.png",
+            "img_alt": "Web-sovellus esimerkki",
+            "color_class": "text-primary",
+            "link": "/about",
+            "link_text": "Lue lisää"
+            }
+        },
+        "achievements": {
+            "header": "Projektien kohokohdat",
+            "text": "Tutustu merkittäviin projekteihini ja onnistumisiin, jotka osoittavat taitoni ja kokemukseni."
+        },
+        "close_section": {
+            "header": "Jätä yhteydenotto",
+            "text": "Jos kiinnostuit, ota yhteyttä lopuksi – mahdollisuus keskustella uusista projekteista on aina avoinna.",
+            "button": "Ota yhteyttä"
+        }
+    },
+    "about": {
+        "title": "Tietoa minusta",
+        "header_1": "Kuka olen?",
+        "content_1": "Olen Svante Kokkoniemi, suomalainen web-kehittäjä. Rakennan moderneilla teknologioilla nopeita ja viimeisteltyjä verkkosovelluksia.",
+        "header_2": "Miten aloitin?",
+        "content_2": "Ohjelmointi alkoi harrastuksena ja kasvoi ammatiksi. Minua motivoi ratkaisujen luominen, joissa yhdistyvät käytettävyys, tehokkuus ja visuaalisuus.",
+        "header_3": "Polku ja kiinnostuksen kohteet",
+        "content_3": "Olen oppinut itsenäisesti ja projekteissa. Tällä hetkellä keskityn erityisesti frontend-teknologioihin, AI-integrointiin ja SEO-optimointiin.",
+        "projects_link": "Tutustu projekteihin"
+    },
+    "projects": {
+        "title": "Kiinnitetyt projektit"
+    },
+    "contact": {
+        "title": "Ota yhteyttä",
+        "email": "Sähköposti",
+        "github": "GitHub",
+        "linkedin": "LinkedIn",
+        "discord": "Discord"
+    },
+    "header": {
+        "home": "Koti",
+        "about": "Tietoa minusta",
+        "projects": "Projektit",
+        "contact": "Ota yhteyttä"
+    },
+    "footer": {
+        "host": "Isännöijä GitHub Pages.",
+        "botsafe": "paina avataksesi"
+    }
+}

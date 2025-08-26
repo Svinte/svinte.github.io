@@ -1,4 +1,4 @@
-name: Update pinned and deploy site
+name: Update pinned, translate and deploy site
 
 on:
   push:
@@ -39,12 +39,18 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
 
+      - name: Generate pinned translations
+        run: npm run translate:pinned
+
+      - name: Generate content translations
+        run: npm run translate:content
+
       - name: Commit changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add src/assets/pinned.json
-          git commit -m "chore: update pinned.json with colors" || echo "No changes"
+          git add src/assets/pinned.json src/locales
+          git commit -m "chore: update pinned.json and translations" || echo "No changes"
           git push
 
   build:

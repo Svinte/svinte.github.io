@@ -1,46 +1,50 @@
 [
   {
     "name": "FrontCloner",
-    "description": "Laravel package for frontend cloning and optimization.",
     "url": "https://github.com/Svinte/FrontCloner",
     "stargazerCount": 0,
     "forkCount": 0,
     "primaryLanguage": {
       "name": "PHP"
     },
-    "color": "#8892BF"
+    "color": "#8892BF",
+    "description_en": "Laravel package for frontend cloning and optimization.",
+    "description_fi": "Laravel-paketti frontendin kloonaukseen ja optimointiin."
   },
   {
     "name": "Botsafe",
-    "description": "Scripts to prevent Web scraping",
     "url": "https://github.com/Svinte/Botsafe",
     "stargazerCount": 0,
     "forkCount": 0,
     "primaryLanguage": {
       "name": "TypeScript"
     },
-    "color": "#3B8CD6"
+    "color": "#3B8CD6",
+    "description_en": "Scripts to prevent Web scraping",
+    "description_fi": "Skriptit verkkoskrappauksen estämiseksi"
   },
   {
     "name": "svinte.github.io",
-    "description": "Vue.js GitHub User Pages",
     "url": "https://github.com/Svinte/svinte.github.io",
     "stargazerCount": 0,
     "forkCount": 0,
     "primaryLanguage": {
       "name": "Vue"
     },
-    "color": "#42b883"
+    "color": "#42b883",
+    "description_en": "Vue.js GitHub User Pages",
+    "description_fi": "Vue.js GitHub-käyttäjäsivut"
   },
   {
     "name": "Wordle-Solver",
-    "description": "Python Wordle game solver",
     "url": "https://github.com/Svinte/Wordle-Solver",
     "stargazerCount": 0,
     "forkCount": 0,
     "primaryLanguage": {
       "name": "Python"
     },
-    "color": "#FFD43B"
+    "color": "#FFD43B",
+    "description_en": "Python Wordle game solver",
+    "description_fi": "Python Wordle-pelin ratkaisija"
   }
 ]

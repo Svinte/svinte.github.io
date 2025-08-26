@@ -5,8 +5,14 @@
         </figure>
 
         <div class="col-md-4">
-            <h2>Kuka olen?</h2>
-            <p>Lyhyt kuvaus itsestäni ja taustastani.</p>
+            <h2>{{ t('about.header_1') }}</h2>
+            <p>{{ t('about.content_1') }}</p>
         </div>
     </section>
 </template>
+
+<script lang="ts" setup>
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
+</script>

@@ -1,59 +1,36 @@
-<script setup lang="ts">
-import { RouterLink } from 'vue-router';
-
-</script>
-
 <template>
     <div id="Carousel" class="carousel slide position-relative" data-bs-ride="carousel">
 
     <div class="carousel-inner">
-        <div class="carousel-item active">
-        <section class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-5">
+        <div
+            v-for="(item, i) in items"
+            :key="i"
+            :class="['carousel-item', { active: i === 0 }]"
+        >
+            <section class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-5">
             <div class="col-6">
-                <h1 class="mb-4 text-success">Ensimmäinen huomion herättäjä</h1>
-                <p>Tämä teksti herättää lukijan ensimmäisen huomion. Tähän tulee panostaa.</p>
-            </div>
+                <h1 :class="['mb-4', item.colorClass]">{{ item.title }}</h1>
+                <p>{{ item.text }}</p>
 
-            <figure class="col-5">
-            <picture class="d-flex align-items-center justify-content-center" style="height:400px;">
-                <img src="/images/cozy.png" alt="Web app 2" width="1080" class="w-100 h-100" style="object-fit:contain;">
-            </picture>
-            </figure>
-        </section>
-        </div>
-
-        <div class="carousel-item">
-        <section class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-5">
-            <div class="col-6">
-                <h1 class="mb-4 text-warning">Uusi vielä vaikuttavampi</h1>
-                <p>Tämä teksti on painavempi kuin edellisempi, joka saa lukijan vaikuttumaan.</p>
-            </div>
-
-            <figure class="col-5">
-            <picture class="d-flex align-items-center justify-content-center" style="height:400px;">
-                <img src="/images/undraw_working-from-anywhere.svg" alt="Web app 2" width="1080" class="w-100 h-100" style="object-fit:contain;">
-            </picture>
-            </figure>
-        </section>
-        </div>
-
-        <div class="carousel-item">
-        <section class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-5">
-            <div class="col-6">
-                <h1 class="mb-4 text-primary">Call to action</h1>
-                <p>Tällä tekstillä ei ole visuaalista painoa. Tarkoitus on vain kutsua käyttäjä jatkamaan sivuston selausta.</p>
-
-                <div class="mx-auto mt-5 d-flex justify-content-center">
-                    <RouterLink to="/about" class="btn btn-warning col-3"><span>Read more</span></RouterLink>
+                <div v-if="item.link" class="mx-auto mt-5 d-flex justify-content-center">
+                    <RouterLink :to="item.link" class="btn btn-warning col-3">
+                        <span>{{ item.linkText }}</span>
+                    </RouterLink>
                 </div>
             </div>
 
             <figure class="col-5">
-            <picture class="d-flex align-items-center justify-content-center" style="height:400px;">
-                <img src="/images/app.png" alt="Web app 2" width="1080" class="w-100 h-100" style="object-fit:contain;">
-            </picture>
+                <picture class="d-flex align-items-center justify-content-center" style="height:400px;">
+                <img
+                    :src="item.img"
+                    :alt="item.imgAlt"
+                    width="1080"
+                    class="w-100 h-100"
+                    style="object-fit:contain;"
+                />
+                </picture>
             </figure>
-        </section>
+            </section>
         </div>
     </div>
 
@@ -77,3 +54,30 @@ import { RouterLink } from 'vue-router';
 
     </div>
 </template>
+
+<script setup lang="ts">
+import { RouterLink } from 'vue-router';
+import { useI18n } from 'vue-i18n'
+import { computed } from 'vue'
+
+const { t } = useI18n()
+
+const items = computed(() => {
+    return Array.from({ length: 3 }, (_, i) => {
+        const index = i + 1
+        var link = t(`home.carousel.${index}.link`)
+
+        const CTA = link === `home.carousel.${index}.link` ? true : false
+
+        return {
+            title: t(`home.carousel.${index}.title`),
+            text: t(`home.carousel.${index}.text`),
+            img: t(`home.carousel.${index}.img`),
+            imgAlt: t(`home.carousel.${index}.img_alt`),
+            colorClass: t(`home.carousel.${index}.color_class`),
+            link: CTA ? null : link,
+            linkText: link ? t(`home.carousel.${index}.link_text`) : null
+        }
+    })
+})
+</script>
