@@ -1,26 +1,26 @@
 {
   "home": {
-    "title": "For Websites",
+    "title": "For websites",
     "text_carousel": {
-      "1": "More Efficient",
+      "1": "More efficient",
       "2": "Faster",
       "3": "Safer",
-      "4": "More Sustainable",
+      "4": "More durable",
       "5": "Better"
     },
     "subtitle": "Since 2021.",
-    "button_contact": "Get in touch",
+    "button_contact": "Contact me",
     "button_more": "Read more",
     "carousel": {
       "1": {
-        "title": "More Efficient Solutions",
-        "text": "I build websites that run fast and smoothly on all devices.",
+        "title": "More efficient solutions",
+        "text": "I build websites that run quickly and smoothly on all devices.",
         "img": "/images/cozy.png",
         "img_alt": "Modern web application",
         "color_class": "text-success"
       },
       "2": {
-        "title": "More Striking User Interfaces",
+        "title": "More striking user interfaces",
         "text": "I design visually appealing and user-friendly solutions.",
         "img": "/images/undraw_working-from-anywhere.svg",
         "img_alt": "User interface design",
@@ -28,7 +28,7 @@
       },
       "3": {
         "title": "Explore my projects",
-        "text": "Go ahead and explore my projects that combine quality and usability.",
+        "text": "Go ahead and explore my projects, which combine quality and usability.",
         "img": "/images/app.png",
         "img_alt": "Web application example",
         "color_class": "text-primary",
@@ -37,13 +37,13 @@
       }
     },
     "achievements": {
-      "header": "Project Highlights",
+      "header": "Project highlights",
       "text": "Explore my significant projects and successes that demonstrate my skills and experience."
     },
     "close_section": {
       "header": "Get in touch",
-      "text": "If you are interested, feel free to get in touch – the opportunity to discuss new projects is always open.",
-      "button": "Get in touch"
+      "text": "If you're interested, get in touch – the opportunity to discuss new projects is always open.",
+      "button": "Contact me"
     }
   },
   "about": {
@@ -52,15 +52,15 @@
     "content_1": "I am Svante Kokkoniemi, a Finnish web developer. I build fast and polished web applications using modern technologies.",
     "header_2": "How did I start?",
     "content_2": "Programming started as a hobby and grew into a profession. I am motivated by creating solutions that combine usability, efficiency, and visual appeal.",
-    "header_3": "Path and Interests",
+    "header_3": "Path and interests",
     "content_3": "I have learned independently and through projects. Currently, I focus particularly on frontend technologies, AI integration, and SEO optimization.",
     "projects_link": "Explore projects"
   },
   "projects": {
-    "title": "Pinned Projects"
+    "title": "Featured projects"
   },
   "contact": {
-    "title": "Get in touch",
+    "title": "Contact me",
     "email": "Email",
     "github": "GitHub",
     "linkedin": "LinkedIn",
@@ -70,10 +70,10 @@
     "home": "Home",
     "about": "About me",
     "projects": "Projects",
-    "contact": "Contact"
+    "contact": "Contact me"
   },
   "footer": {
-    "host": "Hosted on GitHub Pages.",
-    "botsafe": "press to open"
+    "host": "Hosted by GitHub Pages.",
+    "botsafe": "click to open"
   }
 }
