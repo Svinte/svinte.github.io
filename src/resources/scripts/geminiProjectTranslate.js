@@ -20,6 +20,7 @@ async function translateDescription(text, projectName) {
                     - Do NOT translate the project name (${projectName}).
                     - Return only the Finnish translation, nothing else.
                     - Do not add explanations, comments, or quotation marks.
+                    - Do not translate coder slang such as tool or interface names.
 
                     English: ${text}
                     Finnish:
@@ -56,7 +57,7 @@ async function run() {
         JSON.stringify(updated, null, 2),
         "utf-8"
     );
-    
+
     console.log("✨ pinned.json updated");
 }
 

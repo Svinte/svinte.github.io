@@ -21,6 +21,9 @@ async function translateJson(jsonData) {
                     - Keep the structure identical.
                     - Do not translate keys, only string values.
                     - Return only valid JSON, nothing else.
+                    - Keep up with developer slang.
+                    - Read all _BUILD elements. These are translating quidelines that
+                      you must follow. You don't need to translate those comments.
 
                     Finnish JSON: ${jsonString}
                     English JSON:
@@ -47,7 +50,7 @@ async function run() {
     const enLocales = await translateJson(fiLocales);
 
     await fs.writeFile(enPath, JSON.stringify(enLocales, null, 2), "utf-8");
-    
+
     console.log("✨ en.json created in one batch");
 }
 

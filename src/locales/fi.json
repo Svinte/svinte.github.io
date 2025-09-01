@@ -1,12 +1,14 @@
 {
     "home": {
         "title": "verkkosivujen puolesta",
+        "_BUILD": "Title is the end for text_carousel words. Make sure it's suitable for all beginning words.",
         "text_carousel": {
             "1": "Tehokkaampien",
             "2": "Nopeampien",
             "3": "Turvallisempien",
             "4": "Kestävempien",
-            "5": "Parempien"
+            "5": "Parempien",
+            "_BUILD": "text_carousel items must be a single word long. This is for aestetic purposes."
         },
         "subtitle": "Jo vuodesta 2021.",
         "button_contact": "Ota yhteyttä",
