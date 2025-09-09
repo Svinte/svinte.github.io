@@ -43,12 +43,12 @@
 
         <button class="carousel-control-prev position-absolute top-100 ms-5" type="button" data-bs-target="#Carousel" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Edellinen</span>
+            <span class="visually-hidden">{{ t('home.carousel.previus') }}</span>
         </button>
 
         <button class="carousel-control-next position-absolute top-100 me-5" type="button" data-bs-target="#Carousel" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Seuraava</span>
+            <span class="visually-hidden">{{ t('home.carousel.next') }}</span>
         </button>
     </div>
 
