@@ -15,32 +15,34 @@
         "button_more": "Lue lisää",
         "carousel": {
             "1": {
-            "title": "Tehokkaampia ratkaisuja",
-            "text": "Rakennan verkkosivustoja, jotka toimivat nopeasti ja sujuvasti kaikilla laitteilla.",
+            "title": "Uusi, mutta vanha",
+            "text": "Uuden oppiminen vie aikaa. Siksi ohjelmiston suunnittalussa tulee huomioida käyttäjien muut tuntemat ohjelmistot.",
             "img": "/images/cozy.png",
             "img_alt": "Moderni web-sovellus",
             "color_class": "text-success"
             },
             "2": {
-            "title": "Näyttävämpiä käyttöliittymiä",
-            "text": "Suunnittelen visuaalisesti houkuttelevia ja käyttäjäystävällisiä ratkaisuja.",
+            "title": "GEO on uusi SEO",
+            "text": "Tekoäly ei ole vain uusi hakukone. Kuluttajat luottavat 30% enemmän generatiiviseen tekoälyyn.",
             "img": "/images/undraw_working-from-anywhere.svg",
             "img_alt": "Käyttöliittymän suunnittelu",
             "color_class": "text-warning"
             },
             "3": {
-            "title": "Tutustu projekteihini",
+            "title": "Hae inspiraatiota",
             "text": "Jatka eteenpäin ja tutustu projekteihini, jotka yhdistävät laadun ja käytettävyyden.",
             "img": "/images/app.png",
             "img_alt": "Web-sovellus esimerkki",
             "color_class": "text-primary",
             "link": "/about",
             "link_text": "Lue lisää"
-            }
+            },
+            "next": "seuraava",
+            "previus": "edellinen"
         },
         "achievements": {
-            "header": "Projektien kohokohdat",
-            "text": "Tutustu merkittäviin projekteihini ja onnistumisiin, jotka osoittavat taitoni ja kokemukseni."
+            "header": "Tekoälyn hyödyntäjä ensimmäisessä generaatiossa.",
+            "text": "Aloitin ohjelmoinnin ennen tekoälyn popularisoitumista. Tämä tarjosi mahdollisuuden kokea perinteinen ohjelmointi ilman perinteihin kiinnittymistä. Nykyään integroin tekoälyratkaisuja osaksi ohjelmistoani."
         },
         "close_section": {
             "header": "Jätä yhteydenotto",
