@@ -23,11 +23,11 @@
 
         <div class="d-flex flex-column align-items-center text-center d-md-none mb-4">
             <div class="text-carousel mb-1 mx-auto">
-                <div class="carousel-words">
+                <div class="carousel-words text-center">
                     <span
                         v-for="(word, i) in words"
                         :key="i"
-                        class="display-4 fw-bold text-end carousel-word"
+                        class="display-4 fw-bold carousel-word"
                     >
                         {{ word }}
                     </span>
@@ -39,7 +39,7 @@
         <p class="text-center fw-light text-light fs-1 fs-md-1">{{ t('home.subtitle') }}</p>
         <div class="mx-auto mt-5 d-flex justify-content-center align-items-center gap-4">
             <RouterLink to="/contact" class="btn">{{ t('home.button_contact') }}</RouterLink>
-            
+
             <button class="btn-gradient col-1" @click="scrollToSection"><span>{{ t('home.button_more') }}</span></button>
         </div>
     </section>

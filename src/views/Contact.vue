@@ -1,30 +1,40 @@
 <template>
-    <section id="contact">
-    <div class="container mx-auto my-5 flex flex-col items-center col-5">
-        <h1 class="mb-4">{{ t('contact.title') }}</h1>
-        <ul>
-        <li>{{ t('contact.email') }}:
-            <Botsafe
-            element="kokkoniemisvante@gmail.com"
-            :text="t('footer.botsafe')"
-            reassemble="click"
-            class="text-white text-nowrap"
-            />
-        </li>
+    <section id="contact" class="py-5">
+        <div class="container">
+            <div class="col-12 col-sm-6 mx-auto">
+                <h1 class="mb-4">{{ t('contact.title') }}</h1>
 
-        <li>{{ t('contact.github') }}:
-            <a href="https://github.com/svinte" target="_blank" rel="noopener noreferrer" class="text-white text-nowrap">github.com/svinte</a>
-        </li>
-
-        <li>{{ t('contact.linkedin') }}:
-            <a href="https://www.linkedin.com/in/svante-kokkoniemi" target="_blank" rel="noopener noreferrer" class="text-white text-nowrap">linkedin.com/in/svante-kokkoniemi</a>
-        </li>
-
-        <li>{{ t('contact.discord') }}:
-            <a href="https://discord.com/users/748136788349943859" target="_blank" rel="noopener noreferrer" class="text-white text-nowrap">svinte</a>
-        </li>
-        </ul>
-    </div>
+                <ul class="list-unstyled">
+                    <li class="mb-3">
+                        {{ t('contact.email') }}:
+                        <Botsafe
+                            element="kokkoniemisvante@gmail.com"
+                            :text="t('footer.botsafe')"
+                            reassemble="click"
+                            class="d-inline text-white"
+                        />
+                    </li>
+                    <li class="mb-3">
+                        {{ t('contact.github') }}:
+                        <a href="https://github.com/svinte" target="_blank" rel="noopener noreferrer" class="d-inline text-white">
+                            github.com/svinte
+                        </a>
+                    </li>
+                    <li class="mb-3">
+                        {{ t('contact.linkedin') }}:
+                        <a href="https://www.linkedin.com/in/svante-kokkoniemi" target="_blank" rel="noopener noreferrer" class="d-inline text-white">
+                            linkedin.com/in/svante-kokkoniemi
+                        </a>
+                    </li>
+                    <li class="mb-3">
+                        {{ t('contact.discord') }}:
+                        <a href="https://discord.com/users/748136788349943859" target="_blank" rel="noopener noreferrer" class="d-inline text-white">
+                            svinte
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </section>
 </template>
 

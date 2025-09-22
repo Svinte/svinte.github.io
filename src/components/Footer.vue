@@ -1,8 +1,10 @@
 <template>
     <footer class="text-white py-4 mt-auto">
         <section class="container py-3">
-            <div class="d-flex flex-wrap justify-content-between gap-3 w-100 w-md-50 mx-auto">
-                <div class="d-flex flex-column flex-md-row align-items-center gap-2">
+            <div
+                class="d-flex flex-column flex-md-row justify-content-center justify-content-md-between align-items-center gap-3 w-100 w-md-50 mx-auto"
+            >
+                <div class="d-flex flex-row align-items-center gap-2">
                     <img src="/icons/mail.svg" alt="email" height="24" />
                     <Botsafe
                         element="kokkoniemisvante@gmail.com"
@@ -12,7 +14,7 @@
                     />
                 </div>
 
-                <div class="d-flex flex-column flex-md-row align-items-center gap-2">
+                <div class="d-flex flex-row align-items-center gap-2">
                     <img src="/icons/linked.svg" alt="linkedin" height="24" />
                     <a
                         href="https://linked.in/svante-kokkoniemi"
@@ -23,7 +25,7 @@
                     </a>
                 </div>
 
-                <div class="d-flex flex-column flex-md-row align-items-center gap-2">
+                <div class="d-flex flex-row align-items-center gap-2">
                     <img src="/icons/discord.svg" alt="discord" height="24" />
                     <a
                         href="https://discord.com/users/748136788349943859"
@@ -34,7 +36,7 @@
                     </a>
                 </div>
 
-                <div class="d-flex flex-column flex-md-row align-items-center gap-2">
+                <div class="d-flex flex-row align-items-center gap-2">
                     <img src="/icons/github.svg" alt="github" height="24" />
                     <a
                         href="https://github.com/svinte"
@@ -56,10 +58,9 @@
     </footer>
 </template>
 
-
 <script setup lang="ts">
 import Botsafe from './Botsafe.vue';
-import { useI18n } from 'vue-i18n'
+import { useI18n } from 'vue-i18n';
 
-const { t } = useI18n()
+const { t } = useI18n();
 </script>

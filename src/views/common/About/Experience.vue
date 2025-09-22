@@ -1,13 +1,18 @@
 <template>
-    <section id="Experience" class="row justify-content-center align-items-center gap-5">
-        <div class="col-6">
+    <section
+        id="Experience"
+        class="row justify-content-center align-items-center gap-4 text-center text-md-start py-4"
+    >
+        <div class="col-12 col-md-6">
             <h2>{{ t('about.header_3') }}</h2>
             <p>{{ t('about.content_3') }}.</p>
 
-            <RouterLink to="/projects" class="btn btn-primary mt-3">Tarkastele projekteja</RouterLink>
+            <RouterLink to="/projects" class="btn btn-primary mt-3">
+                {{ t('about.projects_link') }}
+            </RouterLink>
         </div>
 
-        <figure class="col-3">
+        <figure class="col-12 col-md-3 mt-5">
             <img src="/images/undraw_mobile-ux.svg" class="img-fluid" alt="">
         </figure>
     </section>
