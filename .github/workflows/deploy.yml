@@ -30,22 +30,22 @@ jobs:
       # Set environment variables
       - name: Set environment variables
         run: |
-          echo "GEMINI_API_KEY=${{ secrets.GEMINI_API_KEY }}" >> $GITHUB_ENV
+          echo "OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }}" >> $GITHUB_ENV
           echo "GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}" >> $GITHUB_ENV
 
       # Fetch pinned
       - name: Fetch pinned
         run: npm run fetch:pinned
 
-      # Update colors
+      # Update colors using OpenAI
       - name: Update colors
         run: npm run colors:update
 
-      # Translate pinned
+      # Translate pinned using OpenAI
       - name: Translate pinned
         run: npm run translate:pinned
 
-      # Translate content
+      # Translate content using OpenAI
       - name: Translate content
         run: npm run translate:content
 

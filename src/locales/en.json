@@ -1,66 +1,78 @@
 {
   "home": {
-    "title": "Websites",
+    "title": "for websites",
+    "_BUILD": "Title is the end for text_carousel words. Make sure it's suitable for all beginning words.",
     "text_carousel": {
-      "1": "Optimized",
+      "1": "More efficient",
       "2": "Faster",
       "3": "Safer",
-      "4": "Durable",
-      "5": "Better"
+      "4": "More sustainable",
+      "5": "Better",
+      "_BUILD": "text_carousel items must be a single word long. This is for aestetic purposes."
     },
     "subtitle": "Since 2021.",
-    "button_contact": "Get in touch",
+    "button_contact": "Contact",
     "button_more": "Read more",
     "carousel": {
       "1": {
-        "title": "More Efficient Solutions",
-        "text": "I build websites that run fast and smoothly on all devices.",
+        "title": "New, but old",
+        "text": "Learning new things takes time. That's why software design must consider other software users are familiar with.",
         "img": "/images/cozy.png",
         "img_alt": "Modern web application",
         "color_class": "text-success"
       },
       "2": {
-        "title": "Visually Appealing UIs",
-        "text": "I design visually attractive and user-friendly solutions.",
+        "title": "GEO is the new SEO",
+        "text": "AI is not just a new search engine. Consumers trust generative AI 30% more.",
         "img": "/images/undraw_working-from-anywhere.svg",
         "img_alt": "User interface design",
         "color_class": "text-warning"
       },
       "3": {
-        "title": "Explore My Projects",
-        "text": "Explore my projects, where quality meets usability.",
+        "title": "Get inspired",
+        "text": "Keep moving forward and explore my projects that combine quality and usability.",
         "img": "/images/app.png",
         "img_alt": "Web application example",
         "color_class": "text-primary",
         "link": "/about",
         "link_text": "Read more"
-      }
+      },
+      "next": "next",
+      "previus": "previous"
     },
     "achievements": {
-      "header": "Project Highlights",
-      "text": "Explore my significant projects and successes that showcase my skills and experience."
+      "header": "AI user in the first generation.",
+      "text": "I started programming before AI became popular. This offered the chance to experience traditional programming without being tied to traditions. Nowadays I integrate AI solutions as part of my software."
     },
     "close_section": {
-      "header": "Get in Touch",
-      "text": "If you're interested, feel free to reach out – new project discussions are always welcome.",
-      "button": "Get in touch"
+      "header": "Leave a contact",
+      "text": "If you are interested, contact me in the end – the opportunity to discuss new projects is always open.",
+      "button": "Contact"
     }
   },
   "about": {
-    "title": "About Me",
+    "title": "About me",
     "header_1": "Who am I?",
     "content_1": "I am Svante Kokkoniemi, a Finnish web developer. I build fast and polished web applications with modern technologies.",
-    "header_2": "How I Started",
-    "content_2": "Programming began as a hobby and grew into a profession. I am motivated by creating solutions that combine usability, efficiency, and visual appeal.",
-    "header_3": "My Journey & Interests",
-    "content_3": "I have learned independently and through projects. Currently, I focus particularly on frontend technologies, AI integration, and SEO optimization.",
-    "projects_link": "Explore Projects"
+    "header_2": "How did I start?",
+    "content_2": "Programming started as a hobby and grew into a profession. I am motivated by creating solutions that combine usability, efficiency, and visual appeal.",
+    "header_3": "Path and interests",
+    "content_3": "I have learned independently and through projects. Currently, I focus especially on frontend technologies, AI integration, and SEO optimization.",
+    "projects_link": "Explore projects"
   },
   "projects": {
-    "title": "Featured Projects"
+    "title": "Pinned projects"
+  },
+  "reversi": {
+    "header": "Reversi",
+    "turn": "Turn",
+    "black": "Black",
+    "white": "White",
+    "score": "Score",
+    "new_game": "New game"
   },
   "contact": {
-    "title": "Contact Me",
+    "title": "Contact",
     "email": "Email",
     "github": "GitHub",
     "linkedin": "LinkedIn",
@@ -68,12 +80,12 @@
   },
   "header": {
     "home": "Home",
-    "about": "About",
+    "about": "About me",
     "projects": "Projects",
     "contact": "Contact"
   },
   "footer": {
-    "host": "Hosted on GitHub Pages.",
-    "botsafe": "Click to open"
+    "host": "Hosted by GitHub Pages.",
+    "botsafe": "press to open"
   }
 }
