@@ -26,7 +26,7 @@ watch(
 <template>
     <main class="app">
         <header class="header">
-        <h1>{{ t('reversi.title') }}</h1>
+        <h1>{{ t('reversi.header') }}</h1>
         <p v-if="!store.isGameOver">{{ t('reversi.turn') }}: <strong>{{ currentPlayerLabel }}</strong></p>
         <p v-else>Peli päättyi!</p>
         <p>{{ t('reversi.score') }} — {{ t('reversi.black') }}: {{ store.scores.black }}, {{ t('reversi.white') }}: {{ store.scores.white }}</p>
