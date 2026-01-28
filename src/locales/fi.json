@@ -63,6 +63,14 @@
     "projects": {
         "title": "Kiinnitetyt projektit"
     },
+    "reversi": {
+        "header": "Reversi",
+        "turn": "Vuoro",
+        "black": "Musta",
+        "white": "Valkoinen",
+        "score": "Pisteet",
+        "new_game": "Uusi peli"
+    },
     "contact": {
         "title": "Ota yhteyttä",
         "email": "Sähköposti",
